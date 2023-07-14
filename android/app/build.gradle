@@ -22,11 +22,14 @@ if (flutterVersionName == null) {
 }
 
 apply plugin: 'com.android.application'
+// START: FlutterFire Configuration
+apply plugin: 'com.google.gms.google-services'
+// END: FlutterFire Configuration
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    namespace "com.example.crime_test_app"
+   // namespace "com.example.crime_test_app"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -34,11 +37,21 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
+    // Add this block
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude 'META-INF/proguard/com.google.android.gms.measurement.**.pro'
+    }
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
+    // Add this block
+    configurations.all {
+        resolutionStrategy {
+            force 'com.google.android.gms:play-services-basement:17.6.0'
+        }
+    }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
@@ -69,4 +82,8 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation platform('com.google.firebase:firebase-bom:29.0.0') // Add this line
+    implementation 'com.google.firebase:firebase-messaging' // Add this line
+    implementation 'com.google.android.gms:play-services-maps:17.2.1' // Add this line
+
 }

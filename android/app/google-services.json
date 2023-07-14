@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "488895541856",
+    "project_id": "crime-alerts-16",
+    "storage_bucket": "crime-alerts-16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488895541856:android:3d0c727ec70ec53a448905",
+        "android_client_info": {
+          "package_name": "com.example.crime_test_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488895541856-rbtmvpv6278lbjq7t9l66s7b6q0n7ci2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9zGlC_6RIRxwp1jFv8uIXt-Y2lERRB40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488895541856-rbtmvpv6278lbjq7t9l66s7b6q0n7ci2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "488895541856-ajjbbmnd8jslrc0spcmrp4qr2pkhl7bi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.crimeTestApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
