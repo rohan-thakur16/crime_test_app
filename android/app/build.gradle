@@ -37,12 +37,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    // Add this block
     packagingOptions {
-        exclude 'META-INF/atomicfu.kotlin_module'
-        exclude 'META-INF/proguard/androidx-annotations.pro'
-        exclude 'META-INF/proguard/com.google.android.gms.measurement.**.pro'
+        resources {
+            excludes += ['META-INF/atomicfu.kotlin_module', 'META-INF/proguard/androidx-annotations.pro', 'META-INF/proguard/com.google.android.gms.measurement.**.pro']
+        }
     }
+// Add this block
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -74,6 +74,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    namespace 'com.example.crime_test_app'
 }
 
 flutter {
@@ -84,6 +85,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation platform('com.google.firebase:firebase-bom:29.0.0') // Add this line
     implementation 'com.google.firebase:firebase-messaging' // Add this line
-    implementation 'com.google.android.gms:play-services-maps:17.2.1' // Add this line
+    implementation 'com.google.android.gms:play-services-maps:18.1.0' // Add this line
+
+
 
 }
