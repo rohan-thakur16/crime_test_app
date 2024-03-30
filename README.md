@@ -10,12 +10,13 @@ Main Components:
 
 3. **Google Maps Integration**: The app utilizes the `google_maps_flutter` package to display a map with markers indicating crime locations. It also uses polygons to represent dangerous areas.
 
-4. **HTTP Requests**: The app makes HTTP requests to fetch crime data from the Police API (`https://data.police.uk/api/crimes-street/all-crime`). It then processes ![Screenshot_1691083878](https://github.com/rohan-thakur16/crime_test_app/assets/94912422/739ec860-93d5-493f-bb20-2531e9f2bd23)
-the data and creates markers on the map accordingly.
+4. **HTTP Requests**: The app makes HTTP requests to fetch crime data from the Police API (`https://data.police.uk/api/crimes-street/all-crime`). It then processes the data and creates markers on the map accordingly.
+   ![Screenshot_1691083878](https://github.com/rohan-thakur16/crime_test_app/assets/94912422/739ec860-93d5-493f-bb20-2531e9f2bd23)
 
-5. **Geolocation**: The app uses the `geolocator` package to get the user's location and display it on the map as a marker with a magenta hue.
 
-6. **User Interface**: The app has a bottom navigation bar with two tabs: "Map" and "Notifications". The "Map" tab displays the crime data on the map, and the "Notifications" tab shows crime-related notifications.
+6. **Geolocation**: The app uses the `geolocator` package to get the user's location and display it on the map as a marker with a magenta hue.
+
+7. **User Interface**: The app has a bottom navigation bar with two tabs: "Map" and "Notifications". The "Map" tab displays the crime data on the map, and the "Notifications" tab shows crime-related notifications.
 
 Functionality Overview:
 - The app initializes Firebase, sets up notification handling, and requests permission for displaying notifications.![Screenshot_1690567575](https://github.com/rohan-thakur16/crime_test_app/assets/94912422/50fc3731-00c3-4983-aa0f-825da0df9ba2)
